@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.slot-machine {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cell {
+    width: 60px; /* Szerokość komórki */
+    height: 60px; /* Wysokość komórki */
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em; /* Rozmiar symboli */
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; /* Zapobiega wychodzeniu symboli poza komórkę */
+}
+
+.cell.win {
+    background-color: gold; /* lub inny kolor, który preferujesz */
+}
+
+.spinning {
+    animation: spin 1s linear infinite; /* Ustaw animację na 1 sekundę */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#Kredyty, #Wygrana {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+#wygranaInfo {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: green;
+}
+
+.winning {
+    background-color: gold; /* Kolor złoty */
+}
+
+#Stawka {
+    margin: 10px 0;
+    font-size: 18px;
+}
